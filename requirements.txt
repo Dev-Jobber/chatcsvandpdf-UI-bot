@@ -2,6 +2,7 @@ faiss-cpu
 groq
 langchain-groq
 PyPDF2
+PyMuPDF
 langchain_google_genai
 langchain
 streamlit
