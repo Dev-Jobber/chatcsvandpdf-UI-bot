@@ -39,7 +39,7 @@ prompt = ChatPromptTemplate.from_template(
 def vector_embedding():
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=google_api_key)
 
-    pdf_path = "./documents/001-HIDE-AND-SEEK-Free-Childrens-Book-By-Monkey-Pen.pdf"
+    pdf_path = "./documents/file.pdf"
     doc = fitz.open(pdf_path)
 
     docs = []
@@ -72,11 +72,11 @@ def llm_generator(input_query):
     response = retrieval_chain.invoke({'input': prompt1})
     
     
-    #print document similarity results
-    # print("\nDocument Similarity Search:")
-    # for i, doc in enumerate(response["context"]):
-    #     print(doc.page_content)
-    #     print("--------------------------------")
+    # print document similarity results
+    print("\nDocument Similarity Search:")
+    for i, doc in enumerate(response["context"]):
+        print(doc.page_content)
+        print("--------------------------------")
         
         
     print("Response time:", time.process_time() - start)
