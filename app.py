@@ -39,7 +39,7 @@ prompt = ChatPromptTemplate.from_template(
 def vector_embedding():
     embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=google_api_key)
 
-    pdf_path = "./documents/file.pdf"
+    pdf_path = "./documents/Chatbot_Data.pdf"
     doc = fitz.open(pdf_path)
 
     docs = []
